@@ -3,6 +3,7 @@
 const app = require('commander')
 const inquier = require('inquirer')
 const chalk = require('chalk')
+const { weather } = require('./src/weathers')
 
 const receiver = () => {
   inquier.prompt([
@@ -15,7 +16,10 @@ const receiver = () => {
   ])
   .then(answers => {
     if (answers.command === 'weather') {
-      console.log(chalk.blue('Suhu hari ini sangat panas'))
+      weather()
+        .then(data => {
+          console.log(chalk.green(data))
+        })
     } else {
       console.log('Emak nikah lagi')
     }
