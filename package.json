@@ -1,0 +1,19 @@
+{
+  "name": "@arham09/jakarta-today",
+  "version": "1.0.0",
+  "description": "Boring CLI Information about Jakarta",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Jakarta",
+    "Weather"
+  ],
+  "author": "Arham Abiyan",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "inquirer": "^6.4.1"
+  }
+}
