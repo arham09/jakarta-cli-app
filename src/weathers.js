@@ -6,7 +6,9 @@ module.exports = {
     try {
       let result = await axios.get(endpoint)
 
-      return `The weather is ${result.data.weather[0].main}`
+      let isHot = result.data.main.temp <= 29 ? 'cool' : 'hot'
+
+      return `The weather is ${result.data.weather[0].main} and ${isHot}, the temperature is ${result.data.main.temp} Celcius`
     } catch (error) {
       return error
     }
