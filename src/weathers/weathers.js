@@ -1,4 +1,4 @@
-const { endpoint } = require('./config')
+const { endpoint } = require('../config/config')
 const axios = require('axios')
 
 module.exports = {
