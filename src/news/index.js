@@ -14,12 +14,12 @@ async function news() {
     }])
 
     if (getNews.news === 'detik') {
-      detik()
+      await detik()
     } else if (getNews.news === 'kompas') {
       kompas()
     }
   } catch (error) {
-    console.error('Ulala')
+    console.error(error)
   }
 }
 

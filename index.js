@@ -17,8 +17,7 @@ async function main() {
 
   
     if (getChoice.command === 'weather') {
-      let data = await weather()
-      console.log(data)
+      await weather()
     } else if (getChoice.command === 'news') {
       await news()
     }
