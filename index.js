@@ -8,6 +8,8 @@ const news = require('./src/news')
 
 async function main() {
   try {
+    console.log(chalk.green(`Welcome here is some features that has been implemented`))
+
     const getChoice = await inquier.prompt([{
       type: 'list',
       name: 'command',

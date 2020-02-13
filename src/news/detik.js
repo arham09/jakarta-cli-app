@@ -14,7 +14,7 @@ async function detikScraper() {
   $('article a[href]').each((index, element) => {
     // console.log(index, $(element).attr('href'))
     const data = {
-      index: index++,
+      berita: parseInt(index) + 1,
       news: $(element).attr('href')
     }
 

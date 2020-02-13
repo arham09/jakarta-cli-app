@@ -1,5 +1,6 @@
 const { endpoint } = require('../config/config')
 const axios = require('axios')
+const chalk = require('chalk')
 
 module.exports = {
   weather: async () => {
@@ -8,8 +9,7 @@ module.exports = {
 
       let isHot = result.data.main.temp <= 29 ? 'cool' : 'hot'
 
-      console.log(`The weather is ${result.data.weather[0].main} and ${isHot}, 
-                  the temperature is ${result.data.main.temp} Celcius`)
+      console.log(chalk.white(`The weather is ${result.data.weather[0].main} and ${isHot}, \n the temperature is ${result.data.main.temp} Celcius`))
     } catch (error) {
       return error
     }
